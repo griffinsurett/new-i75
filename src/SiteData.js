@@ -2,14 +2,16 @@
 const siteDomain = import.meta.env.PUBLIC_SITE_DOMAIN;
 import Logo from "@/assets/i75logo.webp";
 
+export const course = "CPA";
+
 export const SiteData = {
-  title: "i75 CPA Review",
-  legalName: "i75 CPA Review LLC",
-  logo: Logo.src,
+  title: `i75 ${course} Review`,
+  legalName: `i75 ${course} Review LLC`,
+  Logo: Logo,
   tagline:
     "Get On i-75 with Darius Clark, because The Right Teacher Makes All The Difference!",
   description:
-    "Welcome to i75 CPA Review, your clear and direct road to passing the CPA exam. Led by Darius Clark, our course is designed to simplify complex topics and offer focused, practical insights that help you efficiently prepare for success. Whether you've struggled with other courses or are just starting your CPA journey, i75 CPA Review is here to guide you every step of the way.",
+    `Welcome to i75 ${course} Review, your clear and direct road to passing the ${course} exam. Led by Darius Clark, our course is designed to simplify complex topics and offer focused, practical insights that help you efficiently prepare for success. Whether you've struggled with other courses or are just starting your ${course} journey, i75 ${course} Review is here to guide you every step of the way.`,
   domain: siteDomain,
   url: `https://${siteDomain}`,
 };

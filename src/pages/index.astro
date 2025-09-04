@@ -1,13 +1,30 @@
 ---
-// import Welcome from '../components/Welcome.astro';
+import Heading from '@/components/Heading.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseHeader from '@/components/BaseHeader.astro';
+import HeroSection from '@/sections/HeroSection.astro';
+import AboutSection from '@/sections/AboutSection.astro';
+import PartsLoop from '@/components/PartsLoop.astro';
+import ComparisonSection from '@/sections/ComparisonSection.astro';
+import FooterSection from '@/sections/FooterSection.astro';
+import AchievementsSection from '@/sections/AchievementsSection.astro';
+import TestimonialSection from '@/sections/TestimonialSection.astro';
+import CourseOfferingsSection from '@/sections/CourseOfferingsSection.astro';
+import ContentWrapper from '@/components/ContentWrapper.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+<BaseLayout title="Get on the right road!" description="Welcome to i75 CPA Review, your trusted partner in CPA exam preparation.">
+		<ContentWrapper>
+	<BaseHeader/>
+	<HeroSection/>
+		<AboutSection/>
+		<CourseOfferingsSection/>
+		<ComparisonSection/>
+		<TestimonialSection/>
+		<AchievementsSection/>
+	<FooterSection/>
+		</ContentWrapper>
 
-<BaseLayout>
-	<h1 class="text-3xl font-bold underline">
-	  Hello world!
-	</h1>
 </BaseLayout>

@@ -15,8 +15,8 @@ const {
   links = socialMediaLinks,
   containerClass = "flex items-center space-x-4",
   linkClass = "hover:opacity-80 transition-opacity",
-  iconClass = "text-white",
-  iconSize = "20"
+  iconClass = "text-light-primary",
+  iconSize = "24",
 } = Astro.props;
 ---
 
@@ -31,11 +31,7 @@ const {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon 
-            name={icon} 
-            size={iconSize} 
-            class={iconClass}
-          />
+          <Icon name={icon} size={iconSize} class={iconClass} />
         </a>
       </li>
     ))

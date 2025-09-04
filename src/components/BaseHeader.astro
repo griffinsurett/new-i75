@@ -1,0 +1,25 @@
+---
+import { SiteData } from "@/SiteData"
+import { Image } from "astro:assets"
+import Logo from "@/components/Logo/Logo.astro"
+import Arrow from "@/assets/arrow.png"
+---
+<header class="bg-primary w-screen shadow-2xl">
+       <div class="header-top p-6 flex justify-center items-center rounded-xl border-3 border-light-primary">
+
+</div>
+   <div class="header-middle h-23 flex items-center justify-center rounded-xl border-3 border-light-primary">
+    <div class="w-95/100 mx-auto flex justify-between items-center">
+        <a href="/">
+       <Logo />
+        </a>
+   <Image
+        src={Arrow}
+        alt={"Highway arrow"}
+        class={"w-9 h-10"}
+        width={60}
+        height={60}
+    />
+    </div>
+   </div>
+</header>
