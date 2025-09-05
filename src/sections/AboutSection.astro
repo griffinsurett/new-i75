@@ -10,6 +10,7 @@ import FloatingCard from "@/components/FloatingCard.astro";
 import RightPointedArrow from "@/assets/right-pointed-arrow.png";
 import Counter from "@/components/Counter";
 import Signature from "@/assets/signature.png";
+import CTABlock from "@/components/CTABlock.astro";
 
 // Props (all optional)
 const {
@@ -49,7 +50,7 @@ import Video from "/Did-You-Fail-The-CPA-Exam_-Maybe-Its-not-your-Faultseptember
   class={`relative py-14 md:py-25 space-y-10 text-light-primary ${className}`}
 >
   <!-- Video -->
-  <div class="inset-0 mx-auto w-3/5 h-full text-center flex flex-col gap-5">
+  <div class="inset-0 inner-section lg:w-3/5 h-full text-center flex flex-col gap-5 text-light-primary">
     <Heading tagName="span" className="h3 text-center uppercase">
       Inside The i75 CPA Review Course
     </Heading>
@@ -66,15 +67,5 @@ import Video from "/Did-You-Fail-The-CPA-Exam_-Maybe-Its-not-your-Faultseptember
     <p class="text-2xl text-center leading-relaxed">
       Welcome to i75 CPA Review, <span class="font-bold">your clear and direct road to passing the CPA exam.</span> Led by Darius Clark, our course is designed to <span class="font-bold">simplify complex topics</span> and offer focused, practical insights that help you efficiently prepare for success. <span class="font-bold">Whether you've struggled with other courses or are just starting your CPA journey</span>, i75 CPA Review is here to guide you every step of the way.
     </p>
-    <div class="btn-container flex flex-col justify-center items-center gap-3">
-      <Button variant="borderWhite" href={ctaHref} className="h5 w-full sm:w-auto">
-        {ctaText}
-      </Button>
-      <p class="text-center text-xl lg:text-2xl">"The Right Teacher Makes All The Difference."</p>
-      <Image
-        src={Signature}
-        alt="Signature"
-        className="w-32 h-auto mx-auto"
-      />
-    </div>
+     <CTABlock />
 </section>

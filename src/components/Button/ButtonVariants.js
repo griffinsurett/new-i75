@@ -46,6 +46,9 @@ export const ButtonVariants = {
   borderPrimary: {
     buttonClasses: `${buttonClasses} border-2 border-primary bg-transparent text-primary`,
   },
+  underline: {
+    buttonClasses: `${baseButtonClasses} underline text-base lg:text-xl text-center`,
+  },
   link: {
     buttonClasses: `${baseButtonClasses}`,
   },

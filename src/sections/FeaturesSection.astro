@@ -3,6 +3,8 @@
 import HighwayCard from "@/components/HighwayCard.astro";
 import Heading from "@/components/Heading";
 import Button from "@/components/Button/Button";
+import CTABlock from "@/components/CTABlock.astro";
+import { SiteData } from "@/SiteData";
 
 const {
   id = "features",
@@ -52,14 +54,14 @@ const courseFeatures = [
 ];
 ---
 
-<section id={id} class={`py-16 md:py-24 bg-light-primary ${className}`}>
+<section id={id} class={`py-16 md:py-24 bg-primary ${className}`}>
   <div class="w-85/100 max-w-7xl mx-auto">
     
     <!-- Section Header -->
     <div class="text-center space-y-4 mb-12 md:mb-16">
       <Heading 
         tagName="h2" 
-        className="h2 font-bold text-dark-primary tracking-wide"
+        className="h2 font-bold text-light-primary tracking-wide"
       >
         {title}
       </Heading>
@@ -69,23 +71,20 @@ const courseFeatures = [
     <div class="mb-12 md:mb-16">
       <HighwayCard>
         <!-- Features Grid Inside Single Container -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-12">
           {courseFeatures.map((feature) => (
             <div class="text-center group">
-              <!-- Icon Container -->
-              <div class="w-16 h-16 bg-light-primary/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                <div class="w-8 h-8 text-light-primary" set:html={feature.icon} />
+              <div class="w-auto h-auto flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div class="w-16 h-16 text-light-primary" set:html={feature.icon} />
               </div>
               
-              <!-- Title -->
               <Heading 
                 tagName="h3" 
-                className="h5 mb-3 font-bold text-light-primary"
+                className="h5 uppercase mb-3 font-bold text-light-primary"
               >
                 {feature.title}
               </Heading>
               
-              <!-- Description -->
               <p class="text-sm text-light-primary/90 leading-relaxed">
                 {feature.description}
               </p>
@@ -96,14 +95,11 @@ const courseFeatures = [
     </div>
 
     <!-- Call to Action -->
-    <div class="text-center">
-      <Button
-        variant="secondary"
-        href={ctaHref}
-      >
-        {ctaText}
-      </Button>
-    </div>
+   <CTABlock 
+    showSecondaryButton={true}
+    showQuote={false}
+    signatureClass="order-first w-40 h-auto mx-auto"
+  />
 
   </div>
 </section>

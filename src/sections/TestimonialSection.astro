@@ -8,6 +8,7 @@ import Button from "@/components/Button/Button";
 import Student1 from "@/assets/students.jpg"; // You'll replace these with actual testimonial photos
 import Student2 from "@/assets/students.jpg";
 import Student3 from "@/assets/students.jpg";
+import CTABlock from "@/components/CTABlock.astro";
 
 const {
   id = "testimonials",
@@ -243,29 +244,13 @@ const testimonials = [
 </div>
 
     <!-- Call to Action -->
-    <div class="text-center mt-6">
-      <div class="space-y-6">
-        <p class="text-lg text-dark-secondary">
-          Ready to join our successful students?
-        </p>
-    <div class="flex flex-wrap justify-center items-center gap-6">    
-      <Button
-          variant="secondary"
-          href={"/"}
-          className="h6 w-full lg:w-auto"
-        >
-          Start Your Journey!
-        </Button>
-        <Button
-          variant="borderPrimary"
-          href={ctaHref}
-          className="h6 w-full lg:w-auto"
-        >
-          {ctaText}
-        </Button>
-      </div>
-      </div>
-    </div>
+        <!-- Call to Action -->
+   <CTABlock
+    primaryButtonVariant="secondary" 
+    showSecondaryButton={true}
+    showQuote={false}
+    signatureClass="order-first w-40 h-auto mx-auto"
+  />
 
   </div>
 </section>
