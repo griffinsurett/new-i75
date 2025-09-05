@@ -37,6 +37,11 @@ export const ButtonVariants = {
   },
   borderWhite: {
     buttonClasses: `${buttonClasses} border-2 border-light-primary bg-transparent text-light-primary hover:text-light-primary hover:bg-transparent hover:border-light-primary`,
+    iconDefaults: {
+      src: RightPointedArrow.src,
+      position: "left",
+      className: "w-4 h-6 px-2 transition-all duration-600 ease-in-out",
+    },
   },
   borderPrimary: {
     buttonClasses: `${buttonClasses} border-2 border-primary bg-transparent text-primary`,
