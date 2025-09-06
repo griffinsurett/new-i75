@@ -1,59 +1,33 @@
 ---
-import Button from "@/components/Button/Button";
 import Heading from "@/components/Heading";
-import Logo from "@/components/Logo/Logo.astro";
-import SocialLinks from "@/components/SocialLinks.astro";
-import { SiteData } from "@/SiteData";
-import { Image } from "astro:assets";
-import Students from "@/assets/students.jpg";
-import FloatingCard from "@/components/FloatingCard.astro";
-import RightPointedArrow from "@/assets/right-pointed-arrow.png";
-import Counter from "@/components/Counter";
-import Signature from "@/assets/signature.png";
 import CTABlock from "@/components/CTABlock.astro";
 
 // Props (all optional)
 const {
   id = "about",
   class: className = "",
-  eyebrow = "CPA Review Course",
-  mainMessage = {
-    before: "The Road",
-    beforeClass: "",
-    text: " To CPA",
-    className: "text-light-primary",
-    after: " Begins Today.",
-    afterClass: "",
-  },
-  instructorName = "Darius Clark",
-  instructorTitle = "CPA REVIEW INSTRUCTOR",
-  ctaText = 'GET ON THE "RIGHT ROAD" TO CPA!',
-  ctaHref = "/about",
-
-  // Right side content
-  rightDescription = "Welcome to i75 CPA Review, your clear and direct road to passing the CPA exam. Led by Darius Clark, our course is designed to simplify complex topics and offer focused, practical insights that help you efficiently prepare for success. Whether you've struggled with other courses or are just starting your CPA journey, i75 CPA Review is here to guide you every step of the way.",
-  rightButtonText = "View Success Stories",
-  rightButtonHref = "/testimonials",
-
-  // Flip columns on large screens
   reversed = false,
 } = Astro.props;
 
-const textOrder = reversed ? "order-2 lg:order-1" : "order-1";
-const mediaOrder = reversed ? "order-1 lg:order-2" : "order-2";
-const size = 60;
 import Video from "/Did-You-Fail-The-CPA-Exam_-Maybe-Its-not-your-Faultseptember.mp4";
+import ArrowHeading from "@/components/ArrowHeading.astro";
 ---
-
 <section
   id={id}
   class={`relative py-14 md:py-25 space-y-10 text-light-primary ${className}`}
 >
   <!-- Video -->
   <div class="inset-0 inner-section lg:w-4/6 h-full text-center flex flex-col gap-5 text-light-primary">
-    <Heading tagName="span" className="h3 text-center uppercase">
+    <!-- <Heading tagName="span" className="h3 text-center uppercase">
       Inside The i75 CPA Review Course
-    </Heading>
+    </Heading> -->
+  <ArrowHeading 
+  tagName="h2"
+  className="h3 font-bold text-white uppercase tracking-wider bg-primary px-4 py-2 rounded-lg"
+  containerClass="flex items-center justify-center gap-4 mb-6"
+>
+  Inside The i75 CPA Review Course
+</ArrowHeading>
     <video
       class="w-full h-full object-cover"
       src={Video}
